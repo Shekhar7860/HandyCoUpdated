@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "776020868741",
+    "firebase_url": "https://handyco-d3d71.firebaseio.com",
+    "project_id": "handyco-d3d71",
+    "storage_bucket": "handyco-d3d71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776020868741:android:307c8fa34c12b827",
+        "android_client_info": {
+          "package_name": "com.HandyCo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776020868741-s402uhk0u0dgtj5fshfv4hs9c125agjr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKge1lDla8V8k3gVkJ0gscbrIF4cprXOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776020868741-s402uhk0u0dgtj5fshfv4hs9c125agjr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776020868741:android:d4042589c5cdd2b4",
+        "android_client_info": {
+          "package_name": "com.handyco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776020868741-s402uhk0u0dgtj5fshfv4hs9c125agjr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKge1lDla8V8k3gVkJ0gscbrIF4cprXOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776020868741-s402uhk0u0dgtj5fshfv4hs9c125agjr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
