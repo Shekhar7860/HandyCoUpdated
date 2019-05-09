@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>776020868741-bnts8f0gsg8d01qc5jkp1pfnso8hgtuh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.776020868741-bnts8f0gsg8d01qc5jkp1pfnso8hgtuh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClo4ocHbt6XKRh554LFUUkT7lQt2U8Ntc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>776020868741</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.HandyCo</string>
+	<key>PROJECT_ID</key>
+	<string>handyco-d3d71</string>
+	<key>STORAGE_BUCKET</key>
+	<string>handyco-d3d71.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:776020868741:ios:ded19e191e973b0c</string>
+	<key>DATABASE_URL</key>
+	<string>https://handyco-d3d71.firebaseio.com</string>
+</dict>
+</plist>
