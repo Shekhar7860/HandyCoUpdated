@@ -95,7 +95,7 @@ export default class SetSlots extends Component {
                     daySelectionAnimation={{type: 'border', duration: 200, borderWidth: 1, borderHighlightColor: 'white'}}
                     style={{height: 100, paddingTop: 20, paddingBottom: 10}}
                     calendarHeaderStyle={{color: 'white'}}
-                    calendarColor={'#7743CE'}
+                    calendarColor={'#0097e6'}
                     dateNumberStyle={{color: 'white'}}
                     dateNameStyle={{color: 'white'}}
                     highlightDateNumberStyle={{color: 'yellow'}}
@@ -215,8 +215,8 @@ export default class SetSlots extends Component {
         <View style={styles.listToggleIconWidth2}></View>
         </View>
       </Content>
-      <View style={styles.footerView}>
-      <Button block primary style={styles.mb15} onPress = { () => this.submit()}>
+      <View style={styles.footerView2}>
+      <Button block primary style={styles.commonButtonBackGround} onPress = { () => this.submit()}>
             <Text style={styles.resetText}>SAVE TIMINGS</Text>
             </Button>
       </View>

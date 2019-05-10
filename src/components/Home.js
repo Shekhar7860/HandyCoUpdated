@@ -52,6 +52,14 @@ refreshing: false
         console.log("local", keyValue);
         var parsedData = JSON.parse(keyValue);
         console.log("json", parsedData);
+        service.getBookingsToday(parsedData.user_reference, 0, 1).then((res) => {
+            console.log("checkres", res);
+        
+          })
+          service.getBookingsUpcoming(parsedData.user_reference, 0, 3).then((res) => {
+            console.log("checkres", res);
+        
+          })
         }, (error) => {
         console.log(error) //Display error
         });

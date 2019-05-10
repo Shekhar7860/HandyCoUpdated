@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {Platform, Text, View, TextInput, Switch,Image, TouchableHighlight, ImageBackground, TouchableOpacity, StatusBar, ScrollView, TouchableNativeFeedback} from 'react-native';
+import {Platform, Text, View, TextInput, Alert, Switch,Image, TouchableHighlight, ImageBackground, TouchableOpacity, StatusBar, ScrollView, TouchableNativeFeedback} from 'react-native';
 import styles from '../styles/styles';
 import Constants from '../constants/Constants';
 import Service from '../services/Service';
@@ -51,6 +51,16 @@ export default class SetAvailability extends Component {
   componentDidMount = () => {
 
   }
+
+  submit = () =>{
+    this.setState({loading : true})
+    setTimeout (() =>    {   this.setState({loading : false})
+    setTimeout (() => { Alert.alert("Saved Successfully");
+    this.props.navigation.navigate("Home")}, 1000)
+  }, 1000 )
+
+}
+
   switchValue2 = (isSwitchOn) => {
     console.log('val', isSwitchOn);
     this.setState({isSwitchOn2 : isSwitchOn })
@@ -148,7 +158,7 @@ export default class SetAvailability extends Component {
           </Button>
         </Left>
         <Body style={{ flex:3}}>
-          <Title  style={{color:'white'}}>Set Availability</Title>
+          <Title  style={styles.itemCenter}>Set Availability</Title>
         </Body>
         <Right>
           <Button
@@ -344,6 +354,11 @@ export default class SetAvailability extends Component {
 <Text style={styles.textMargin}> 6: 00 PM</Text>
 </View> : null }
 
+ <View style={styles.footerView2}>
+      <Button block style={styles.commonButtonBackGround} onPress = { () => this.submit()}>
+            <Text style={styles.resetText}>SAVE </Text>
+            </Button>
+      </View>
 
       </Content>
       <CustomToast ref = "defaultToastBottom"/>

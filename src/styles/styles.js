@@ -399,7 +399,7 @@ emptyPostalView : {
   width : '50%'
 },
 textMargin : {
-  marginTop : 10,
+  marginTop : 5,
   fontSize : 15
 },
 textMarginBorder : {
@@ -490,10 +490,18 @@ loginContainer:{
 },
 footerView : {
 position : 'absolute',
-bottom : 20,
+bottom : 5,
 width : '70%',
 alignSelf : 'center'
 },
+commonButtonBackGround :{
+  backgroundColor : colors.themeColor
+},
+footerView2 : {
+  width : '60%',
+  marginTop:5,
+  alignSelf : 'center'
+  },
 buttonWidth:{
   width:300,
   alignItems:align.center
@@ -730,10 +738,10 @@ cardContainerSignUp:{
       width:'45%'
     },
     listToggleIconWidth2:{
-      width:'5%'
+      width:'4%'
     },
     widthtWenty : {
-      width : '10%'
+      width : '5%'
     },
     checkboxTextRow : {
     width : '100%',
@@ -742,7 +750,7 @@ cardContainerSignUp:{
     },
     widthcheckBox : {
       flexDirection : 'row',
-      width : '42%',
+      width : '45%',
       height : 40,
       backgroundColor : '#bdc3c7',
       justifyContent : 'center',
@@ -753,12 +761,8 @@ cardContainerSignUp:{
       height:50
     },
     checkBoxTextWidth : {
-    margin :3,
-    fontSize:13
-    },
-    checkBoxTextWidth : {
       margin :5,
-      fontSize:20
+      fontSize:13
       },
     listTextFontSize:{
       fontSize:20,

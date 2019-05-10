@@ -41,10 +41,7 @@ export default class SetServiceType extends Component {
       mobile:'',
       confirmPassword:'',
       confirmPasswordError:'',
-      passwordError:'',
-      emailFormatError:'',
-      mobileError:'',
-      emailFormatError:'',
+      services : [],
       loading: false,
       cardheight:300,
       list : false,
@@ -54,6 +51,20 @@ export default class SetServiceType extends Component {
     constants = new Constants();
   }
 
+  componentDidMount() {
+
+    service.getUserData('user').then((keyValue) => {
+        console.log("local", keyValue);
+        var parsedData = JSON.parse(keyValue);
+        console.log("json", parsedData);
+        service.getserviceTypes(parsedData.user_reference).then((res) => {
+          console.log("checkres", res);
+          this.setState({ services :res.all })
+        })
+        }, (error) => {
+        console.log(error) //Display error
+        });
+ }
   showHideList = () => {
     if(this.state.list == false) {
     this.setState({imgsource : constants.downIcon })
@@ -108,12 +119,12 @@ export default class SetServiceType extends Component {
       </View>
       {this.state.list ? <View>
         <List
-            dataArray={datas}
+            dataArray={this.state.services}
             renderRow={data =>
               <ListItem>
                 <Left>
                   <Text>
-                    {data}
+                    {data.service_name}
                   </Text>
                 </Left>
                 <Right>

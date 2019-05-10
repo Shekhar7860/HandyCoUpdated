@@ -48,6 +48,7 @@ export default class SetPostalCode extends Component {
       emailFormatError:'',
       loading: false,
       cardheight:300,
+      postalCodes : [],
       imgsource : constants.rightIcon,
       list : false
     }
@@ -55,54 +56,22 @@ export default class SetPostalCode extends Component {
     
   }
 
-  signUp = () =>{
-    this.setState(() => ({ cardheight:370}));
-    if ( !service.validateEmail(this.state.email)) {
-      this.setState(() => ({ emailFormatError: "Proper Email Format is Required"}));
-    } 
-    else{
-      this.setState(() => ({ emailFormatError: ''}));
-    }
-    if (this.state.email.trim() === "") {
-      this.setState(() => ({ emailError: " Email is required."}));
-      this.setState(() => ({ emailFormatError: null}));
-    } else {
-      this.setState(() => ({ emailError: null})); 
-    }
-    if (this.state.password.trim() === "") {
-      this.setState(() => ({ passwordError: " Password is required."}));
-    } else {
-      this.setState(() => ({ passwordError: null}));
-    }
-    if (this.state.mobile.trim() === "") {
-      this.setState(() => ({ mobileError: " Mobile Number is required."}));
-    } else {
-      this.setState(() => ({ mobileError: null}));
-    }
-    if (this.state.confirmPassword.trim() === "") {
-      this.setState(() => ({ confirmPasswordError: " Confirm Password is required."}));
-    } else {
-      this.setState(() => ({ confirmPasswordError: null}));
-    }
-    if(this.state.email && this.state.mobile && this.state.password && this.state.confirmPassword)
-    {
-      this.setState(() => ({ cardheight:300}));
-    }
+  componentDidMount() {
 
-    if(this.state.email && this.state.password && this.state.mobile && this.state.confirmPassword && service.validateEmail(this.state.email))
-    {
-      
-     this.setState ({ loading: true});
-      setTimeout(() => 
-      {this.setState({loading: false})
-      this.refs.defaultToastBottom.ShowToastFunction('SignUp SuccessFully');
-      this.props.navigation.navigate('Login')
-       }, 3000)
-      }
+    service.getUserData('user').then((keyValue) => {
+        console.log("local", keyValue);
+        var parsedData = JSON.parse(keyValue);
+        console.log("json", parsedData);
+        service.getPostalCode(parsedData.user_reference).then((res) => {
+            console.log("checkres", res);
+            this.setState({postalCodes : res.data})
+          })
+        }, (error) => {
+        console.log(error) //Display error
+        });
+ }
 
   
-   // alert(this.state.password)
-   }
    goBack = () =>{
     this.props.navigation.goBack();
    }
@@ -155,7 +124,7 @@ export default class SetPostalCode extends Component {
       </TouchableOpacity>
       <View style={styles.line2}>
       </View>
-      {this.state.list ? <View style={styles.middleRow }><Text style={styles.checkBoxTextWidth}>This is a text </Text><View style={styles.emptySwitch2}></View><CheckBox
+      {/* {this.state.list ? <View style={styles.middleRow }><Text style={styles.checkBoxTextWidth}>This is a text </Text><View style={styles.emptySwitch2}></View><CheckBox
     style={styles.checkboxWidth2}
     onClick={()=>{
       this.setState({
@@ -163,7 +132,23 @@ export default class SetPostalCode extends Component {
       })
     }}
     isChecked={this.state.isChecked8}
-/></View>: null }
+/></View>: null } */}
+{this.state.list ? <View>
+        <List
+            dataArray={this.state.postalCodes}
+            renderRow={data =>
+              <ListItem>
+                <Left>
+                  <Text>
+                    {data.full_address}
+                  </Text>
+                </Left>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
+              </ListItem>}
+          />
+      </View> : null }
       </Content>
       
       <CustomToast ref = "defaultToastBottom"/>

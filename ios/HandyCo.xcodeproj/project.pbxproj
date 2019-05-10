@@ -13,7 +13,9 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* HandyCoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HandyCoTests.m */; };
-		0482C1C62283E2A60055FE1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0482C1992283E2A50055FE1A /* GoogleService-Info.plist */; };
+		04C30E5122843DCF0060ACF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C30E5022843DCF0060ACF3 /* GoogleService-Info.plist */; };
+		04C30E5322843DD40060ACF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C30E5222843DD40060ACF3 /* GoogleService-Info.plist */; };
+		04C30E552284407C0060ACF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C30E542284407C0060ACF3 /* GoogleService-Info.plist */; };
 		106633597643444CB66E6723 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3048C7FFF063450F8E8B5D6E /* libRNGestureHandler.a */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -389,7 +391,9 @@
 		00E356EE1AD99517003FC87E /* HandyCoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandyCoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HandyCoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandyCoTests.m; sourceTree = "<group>"; };
-		0482C1992283E2A50055FE1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04C30E5022843DCF0060ACF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../freelancerbuild29marchlatest 3/ios/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04C30E5222843DD40060ACF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../freelancerbuild29marchlatest 3/ios/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04C30E542284407C0060ACF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HandyCo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandyCo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -709,6 +713,8 @@
 		8254F1BD83C840A9947A5EC2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				04C30E5022843DCF0060ACF3 /* GoogleService-Info.plist */,
+				04C30E5222843DD40060ACF3 /* GoogleService-Info.plist */,
 				566628104601F3BDCC7B29BE /* Pods-HandyCo.debug.xcconfig */,
 				5F9A7335E61FF055D989BBC1 /* Pods-HandyCo.release.xcconfig */,
 				6748B369AA46D7CD40A175C7 /* Pods-HandyCo-tvOS.debug.xcconfig */,
@@ -757,7 +763,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				0482C1992283E2A50055FE1A /* GoogleService-Info.plist */,
+				04C30E542284407C0060ACF3 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* HandyCo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* HandyCoTests */,
@@ -1312,8 +1318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				04C30E5122843DCF0060ACF3 /* GoogleService-Info.plist in Resources */,
+				04C30E552284407C0060ACF3 /* GoogleService-Info.plist in Resources */,
+				04C30E5322843DD40060ACF3 /* GoogleService-Info.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				0482C1C62283E2A60055FE1A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

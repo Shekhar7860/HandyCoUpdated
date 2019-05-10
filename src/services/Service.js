@@ -69,6 +69,135 @@ forgotPassword = (emailId) =>
    });
 }
 
+getBookingsToday = (userId, page, status) => 
+{
+  var data = { 
+    userRef: userId,
+    page : page,
+    status : status
+  }
+
+   console.log(data, 'data')
+ return  fetch(constants.apiUrl + 'getExpertBookings',
+    {
+      method: "POST",
+      headers: {
+       "Accept": "application/json",
+       "Content-Type": "application/json"
+      },
+     body: JSON.stringify(data)
+   }).then((response) => 
+  response.json())
+   .catch((error) => {
+     console.error(error);
+   });
+}
+
+getBookingsUpcoming = (userId, page, status) => 
+{
+  var data = { 
+    userRef: userId,
+    page : page,
+    status : status
+  }
+
+   console.log(data, 'data')
+ return  fetch(constants.apiUrl + 'getExpertBookings',
+    {
+      method: "POST",
+      headers: {
+       "Accept": "application/json",
+       "Content-Type": "application/json"
+      },
+     body: JSON.stringify(data)
+   }).then((response) => 
+  response.json())
+   .catch((error) => {
+     console.error(error);
+   });
+}
+
+setAvailability = () => {
+  var data = {
+    userRef: "8vH3pM2QzLoZwfn",
+    days: "Mon,Tue,Wed,Thu,Fri,Sat",
+    startMorningTime: "8:00 am",
+    endMorningTime: "12:00 pm",
+    startNoonTime: "12:00 pm",
+    endNoonTime: "02:00 pm",
+    startEveningTime: "4:00 pm",
+    endEveningTime: "8:00 pm",
+    startNightTime: "10:00 pm",
+    endNightTime: "11:00 pm",
+    morningStatus: "1",
+    noonStatus: "1",
+    eveningStatus: "1",
+    nightStatus: "1",
+    status: "1"
+    }
+
+   console.log(data, 'data')
+ return  fetch(constants.apiUrl + 'user_setAvailability',
+    {
+      method: "POST",
+      headers: {
+       "Accept": "application/json",
+       "Content-Type": "application/json"
+      },
+     body: JSON.stringify(data)
+   }).then((response) => 
+  response.json())
+   .catch((error) => {
+     console.error(error);
+   });
+}
+
+
+getPostalCode = (userId) => 
+{
+  var data = { 
+    user_reference: userId
+  }
+
+   console.log(data, 'res')
+ return  fetch(constants.apiUrl + 'PostCode',
+    {
+      method: "POST",
+      headers: {
+       "Accept": "application/json",
+       "Content-Type": "application/json"
+      },
+     body: JSON.stringify(data)
+   }).then((response) => 
+  response.json())
+   .catch((error) => {
+     console.error(error);
+   });
+}
+
+getserviceTypes = (userId) => 
+{
+  var data = { 
+    user_reference: userId
+  }
+
+   console.log(data, 'data')
+ return  fetch(constants.apiUrl + 'getServiceTypes',
+    {
+      method: "POST",
+      headers: {
+       "Accept": "application/json",
+       "Content-Type": "application/json"
+      },
+     body: JSON.stringify(data)
+   }).then((response) => 
+  response.json())
+   .catch((error) => {
+     console.error(error);
+   });
+}
+
+
 
 getUserData = async (key) => {
   
