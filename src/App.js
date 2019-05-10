@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import { StackNavigator, DrawerNavigator, createBottomTabNavigator, createStackNavigator} from 'react-navigation';
+import { StackNavigator, createBottomTabNavigator, createStackNavigator} from 'react-navigation';
 import { BackHandler, Alert, Image, View} from 'react-native';
 import Home from './components/Home';
 import SignUp from './components/SignUp';

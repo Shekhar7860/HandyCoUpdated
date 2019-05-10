@@ -117,23 +117,23 @@ getBookingsUpcoming = (userId, page, status) =>
    });
 }
 
-setAvailability = () => {
+setAvailability = (userId, sDays, mTime, mTime2, nTime, nTime2, eTime, eTime2, niTime, niTime2, mS, nS, eS, niS, status ) => {
   var data = {
-    userRef: "8vH3pM2QzLoZwfn",
-    days: "Mon,Tue,Wed,Thu,Fri,Sat",
-    startMorningTime: "8:00 am",
-    endMorningTime: "12:00 pm",
-    startNoonTime: "12:00 pm",
-    endNoonTime: "02:00 pm",
-    startEveningTime: "4:00 pm",
-    endEveningTime: "8:00 pm",
-    startNightTime: "10:00 pm",
-    endNightTime: "11:00 pm",
-    morningStatus: "1",
-    noonStatus: "1",
-    eveningStatus: "1",
-    nightStatus: "1",
-    status: "1"
+    userRef: userId,
+    days: sDays,
+    startMorningTime: mTime,
+    endMorningTime: mTime2,
+    startNoonTime: nTime,
+    endNoonTime: nTime2,
+    startEveningTime:  eTime,
+    endEveningTime: eTime2,
+    startNightTime: niTime,
+    endNightTime: niTime2,
+    morningStatus: mS,
+    noonStatus:  nS,
+    eveningStatus:  eS,
+    nightStatus:  niS,
+    status: status
     }
 
    console.log(data, 'data')

@@ -400,7 +400,8 @@ emptyPostalView : {
 },
 textMargin : {
   marginTop : 5,
-  fontSize : 15
+  fontSize : 15,
+  borderBottomWidth:1
 },
 textMarginBorder : {
   width : 80
@@ -414,7 +415,9 @@ checkboxWidth2 : {
   },
 
 textWidthCheckBox : {
-  width : 27
+  width : 27,
+  fontSize : 10,
+  marginTop:5
 },
 loginIcon:{
   width:20,
@@ -499,7 +502,7 @@ commonButtonBackGround :{
 },
 footerView2 : {
   width : '60%',
-  marginTop:5,
+  marginTop:20,
   alignSelf : 'center'
   },
 buttonWidth:{
